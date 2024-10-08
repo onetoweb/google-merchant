@@ -106,5 +106,7 @@ Setup Client and Authorization Workflow
 Examples
 ========
 
-* `Product <product.rst>`_
-* `Data Source <data_source.rst>`_
+* `Products <product.rst>`_
+* `Data sources <data_source.rst>`_
+* `Notifications <notification.rst>`_
+
