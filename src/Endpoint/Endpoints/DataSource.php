@@ -17,7 +17,7 @@ class DataSource extends AbstractEndpoint
      */
     public function get(string $dataSourceId): ?array
     {
-        return $this->client->get("/datasources/v1beta/accounts/{$this->client->getAccountId()}/dataSources/$dataSourceId");
+        return $this->client->get("/datasources/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/dataSources/$dataSourceId");
     }
     
     /**
@@ -27,7 +27,7 @@ class DataSource extends AbstractEndpoint
      */
     public function list(array $query = []): ?array
     {
-        return $this->client->get("/datasources/v1beta/accounts/{$this->client->getAccountId()}/dataSources", $query);
+        return $this->client->get("/datasources/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/dataSources", $query);
     }
     
     /**
@@ -37,7 +37,7 @@ class DataSource extends AbstractEndpoint
      */
     public function create(array $data): ?array
     {
-        return $this->client->post("/datasources/v1beta/accounts/{$this->client->getAccountId()}/dataSources", $data);
+        return $this->client->post("/datasources/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/dataSources", $data);
     }
     
     /**
@@ -47,6 +47,6 @@ class DataSource extends AbstractEndpoint
      */
     public function delete(int $dataSourceId): ?array
     {
-        return $this->client->delete("/datasources/v1beta/accounts/{$this->client->getAccountId()}/dataSources/$dataSourceId");
+        return $this->client->delete("/datasources/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/dataSources/$dataSourceId");
     }
 }

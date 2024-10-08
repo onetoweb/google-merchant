@@ -16,7 +16,7 @@ class Notification extends AbstractEndpoint
      */
     public function list(array $query = []): ?array
     {
-        return $this->client->get("/notifications/v1beta/accounts/{$this->client->getAccountId()}/notificationsubscriptions", $query);
+        return $this->client->get("/notifications/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/notificationsubscriptions", $query);
     }
     
     /**
@@ -26,7 +26,7 @@ class Notification extends AbstractEndpoint
      */
     public function get(int $notificationId): ?array
     {
-        return $this->client->get("/notifications/v1beta/accounts/{$this->client->getAccountId()}/notificationsubscriptions/$notificationId");
+        return $this->client->get("/notifications/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/notificationsubscriptions/$notificationId");
     }
     
     /**
@@ -36,7 +36,7 @@ class Notification extends AbstractEndpoint
      */
     public function create(array $data): ?array
     {
-        return $this->client->post("/notifications/v1beta/accounts/{$this->client->getAccountId()}/notificationsubscriptions", $data);
+        return $this->client->post("/notifications/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/notificationsubscriptions", $data);
     }
     
     /**
@@ -47,7 +47,7 @@ class Notification extends AbstractEndpoint
      */
     public function update(int $notificationId, array $data, array $query = []): ?array
     {
-        return $this->client->patch("/notifications/v1beta/accounts/{$this->client->getAccountId()}/notificationsubscriptions/$notificationId", $data, $query);
+        return $this->client->patch("/notifications/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/notificationsubscriptions/$notificationId", $data, $query);
     }
     
     /**
@@ -57,6 +57,6 @@ class Notification extends AbstractEndpoint
      */
     public function delete(int $notificationId): ?array
     {
-        return $this->client->delete("/notifications/v1beta/accounts/{$this->client->getAccountId()}/notificationsubscriptions/$notificationId");
+        return $this->client->delete("/notifications/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/notificationsubscriptions/$notificationId");
     }
 }

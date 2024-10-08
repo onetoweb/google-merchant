@@ -34,6 +34,11 @@ class Client
     public const SCOPE_CONTENT = 'https://www.googleapis.com/auth/content';
     
     /**
+     * Scope.
+     */
+    public const VERSION = 'v1beta';
+    
+    /**
      * Methods.
      */
     public const METHOD_GET = 'GET';
@@ -45,6 +50,11 @@ class Client
      * @var ConfigInterface
      */
     private $config;
+    
+    /**
+     * @var string
+     */
+    private $version;
     
     /**
      * @var Token
@@ -68,10 +78,12 @@ class Client
     
     /**
      * @param ConfigInterface $config
+     * @param string $version = self::VERSION
      */
-    public function __construct(ConfigInterface $config)
+    public function __construct(ConfigInterface $config, string $version = self::VERSION)
     {
         $this->config = $config;
+        $this->version = $version;
         
         // load endpoints
         $this->loadEndpoints();
@@ -85,6 +97,14 @@ class Client
         foreach (Endpoints::list() as $name => $class) {
             $this->{$name} = new $class($this);
         }
+    }
+    
+    /**
+     * @return string
+     */
+    public function getVersion(): string
+    {
+        return $this->version;
     }
     
     /**

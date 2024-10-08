@@ -16,6 +16,6 @@ class Quota extends AbstractEndpoint
      */
     public function list(array $query = []): ?array
     {
-        return $this->client->get("/quota/v1beta/accounts/{$this->client->getAccountId()}/quotas", $query);
+        return $this->client->get("/quota/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/quotas", $query);
     }
 }

@@ -16,6 +16,6 @@ class Report extends AbstractEndpoint
      */
     public function search(array $data): ?array
     {
-        return $this->client->post("/reports/v1beta/accounts/{$this->client->getAccountId()}/reports:search", $data);
+        return $this->client->post("/reports/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/reports:search", $data);
     }
 }

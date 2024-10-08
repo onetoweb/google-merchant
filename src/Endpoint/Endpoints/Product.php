@@ -17,7 +17,7 @@ class Product extends AbstractEndpoint
      */
     public function get(string $offerId): ?array
     {
-        return $this->client->get("/products/v1beta/accounts/{$this->client->getAccountId()}/products/$offerId");
+        return $this->client->get("/products/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/products/$offerId");
     }
     
     /**
@@ -28,7 +28,7 @@ class Product extends AbstractEndpoint
      */
     public function create(int $dataSourceId, array $data): ?array
     {
-        return $this->client->post("/products/v1beta/accounts/{$this->client->getAccountId()}/productInputs:insert", $data, [
+        return $this->client->post("/products/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/productInputs:insert", $data, [
             'dataSource' => "accounts/{$this->client->getAccountId()}/dataSources/$dataSourceId"
         ]);
     }
@@ -40,7 +40,7 @@ class Product extends AbstractEndpoint
      */
     public function delete(string $offerId, int $dataSourceId): ?array
     {
-        return $this->client->delete("/products/v1beta/accounts/{$this->client->getAccountId()}/productInputs/$offerId", [
+        return $this->client->delete("/products/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/productInputs/$offerId", [
             'dataSource' => "accounts/{$this->client->getAccountId()}/dataSources/$dataSourceId"
         ]);
     }
@@ -52,7 +52,7 @@ class Product extends AbstractEndpoint
      */
     public function list(array $query = []): ?array
     {
-        return $this->client->get("/products/v1beta/accounts/{$this->client->getAccountId()}/products", $query);
+        return $this->client->get("/products/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/products", $query);
     }
     
     /**
