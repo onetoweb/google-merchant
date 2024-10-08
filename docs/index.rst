@@ -1,5 +1,12 @@
 .. title:: Index
 
+Index
+=====
+
+.. contents::
+    :local:
+
+
 ===========
 Basic Usage
 ===========
@@ -109,4 +116,3 @@ Examples
 * `Products <product.rst>`_
 * `Data sources <data_source.rst>`_
 * `Notifications <notification.rst>`_
-
