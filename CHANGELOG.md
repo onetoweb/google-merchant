@@ -7,3 +7,9 @@
 ## [1.0.1] - 2024-10-02
 
 - Lower polyfill requirements
+
+## [1.0.2] - 2024-10-08
+
+- Added notification endpoint
+- Bugfix: allow for json body if the method is PATCH
+- Lower symfony/http-foundation requirements
