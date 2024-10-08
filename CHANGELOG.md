@@ -13,3 +13,7 @@
 - Added notification endpoint
 - Bugfix: allow for json body if the method is PATCH
 - Lower symfony/http-foundation requirements
+
+## [1.0.3] - 2024-10-08
+
+- Added report endpoint
