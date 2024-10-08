@@ -385,7 +385,7 @@ class Client
         ];
         
         // add json body
-        if ($method === self::METHOD_POST and count($data) > 0) {
+        if (in_array($method, [self::METHOD_POST, self::METHOD_PATCH]) and count($data) > 0) {
             $options[RequestOptions::JSON] = $data;
         }
         
