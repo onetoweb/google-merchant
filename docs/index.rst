@@ -116,6 +116,7 @@ Examples
 * `Products <product.rst>`_
 * `Data sources <data_source.rst>`_
 * `Notifications <notification.rst>`_
+* `Report <report.rst>`_
 
 
 `Back to top <#top>`_
