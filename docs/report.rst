@@ -14,8 +14,8 @@ Report
 Search reports
 ``````````````
 
-For details on how to construct your query see: `Merchant Center Query Language grammar <https://developers.google.com/shopping-content/guides/reports/query-language/grammar>`_
-For the full list of available tables and fields see: `Available fields <https://developers.google.com/shopping-content/guides/reports/fields>`_
+* For details on how to construct your query see: `Merchant Center Query Language grammar <https://developers.google.com/shopping-content/guides/reports/query-language/grammar>`_
+* For the full list of available tables and fields see: `Available fields <https://developers.google.com/shopping-content/guides/reports/fields>`_
 
 .. code-block:: php
     
