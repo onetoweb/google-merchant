@@ -43,7 +43,7 @@ Setup Client and Authorization Workflow
     $version = 'v1beta';
     
     // setup client
-    $client = new Client($config);
+    $client = new Client($config, $version);
     
     // set redirect url
     $redirectUrl = '{redirect_url}';
