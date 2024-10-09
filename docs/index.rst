@@ -39,6 +39,9 @@ Setup Client and Authorization Workflow
     $configFile = '/path/to/config_file.json';
     $config = new ConfigFromFile($configFile);
     
+    // (optional) set version (default to: v1beta)
+    $version = 'v1beta';
+    
     // setup client
     $client = new Client($config);
     
