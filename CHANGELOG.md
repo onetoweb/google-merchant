@@ -23,3 +23,7 @@
 - Added qouta endpoint
 - Added promotion endpoint
 - Added client version
+
+## [1.0.5] - 2024-10-09
+
+- Added account endpoint
