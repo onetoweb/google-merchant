@@ -116,12 +116,13 @@ Setup Client and Authorization Workflow
 Examples
 ========
 
-* `Products <product.rst>`_
-* `Data sources <data_source.rst>`_
-* `Notifications <notification.rst>`_
+* `Product <product.rst>`_
+* `DataSource <data_source.rst>`_
+* `Notification <notification.rst>`_
 * `Report <report.rst>`_
-* `Quotas <quota.rst>`_
+* `Quota <quota.rst>`_
 * `Promotion <promotion.rst>`_
+* `Account <account.rst>`_
 
 
 `Back to top <#top>`_
