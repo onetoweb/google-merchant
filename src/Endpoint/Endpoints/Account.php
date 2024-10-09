@@ -38,4 +38,67 @@ class Account extends AbstractEndpoint
     {
         return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}:listSubaccounts", $query);
     }
+    
+    /**
+     * @param array $query = []
+     * 
+     * @return array|null
+     */
+    public function getBusinessInfo(array $query = []): ?array
+    {
+        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/businessInfo", $query);
+    }
+    
+    /**
+     * @param array $data = []
+     * @param array $query = []
+     * 
+     * @return array|null
+     */
+    public function updateBusinessInfo(array $data = [], array $query = []): ?array
+    {
+        return $this->client->patch("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/businessInfo", $data, $query);
+    }
+    
+    /**
+     * @param array $query = []
+     * 
+     * @return array|null
+     */
+    public function getAutofeedSettings(array $query = []): ?array
+    {
+        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/autofeedSettings", $query);
+    }
+    
+    /**
+     * @param array $query = []
+     * 
+     * @return array|null
+     */
+    public function getBusinessIdentity(array $query = []): ?array
+    {
+        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/businessIdentity", $query);
+    }
+    
+    /**
+     * @param string $email
+     * 
+     * @return array|null
+     */
+    public function getEmailPreferences(string $email): ?array
+    {
+        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/users/$email/emailPreferences");
+    }
+    
+    /**
+     * @param string $email
+     * @param array $data
+     * @param array $query
+     * 
+     * @return array|null
+     */
+    public function updateEmailPreferences(string $email, array $data, array $query): ?array
+    {
+        return $this->client->patch("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/users/$email/emailPreferences", $data, $query);
+    }
 }

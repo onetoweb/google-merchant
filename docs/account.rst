@@ -46,4 +46,65 @@ List subaccounts
     ]);
 
 
+Get business info
+`````````````````
+
+.. code-block:: php
+    
+    $result = $client->account->getBusinessInfo();
+
+
+List update business info
+`````````````````````````
+
+.. code-block:: php
+    
+    $result = $client->account->updateBusinessInfo([
+        'customerService' => [
+            'uri' => 'https://www.example.com/customer_service.html',
+            'email' => 'info@example.com',
+        ],
+    ], [
+        'updateMask' => 'customerService',
+    ]);
+
+
+Get autofeed settings
+`````````````````````
+
+.. code-block:: php
+    
+    $result = $client->account->getAutofeedSettings();
+
+
+Get business identity
+`````````````````````
+
+.. code-block:: php
+    
+    $result = $client->account->getBusinessIdentity();
+
+
+Get email preferences
+`````````````````````
+
+.. code-block:: php
+    
+    $email = 'info@examle.com';
+    $result = $client->account->getEmailPreferences($email);
+
+
+Update email preferences
+````````````````````````
+
+.. code-block:: php
+    
+    $email = 'info@examle.com';
+    $result = $client->account->updateEmailPreferences($email, [
+        'newsAndTips' => 'OPTED_IN' // possible values: OPT_IN_STATE_UNSPECIFIED, OPTED_OUT, OPTED_IN and UNCONFIRMED
+    ], [
+        'updateMask' => 'newsAndTips',
+    ]);
+
+
 `Back to top <#top>`_
