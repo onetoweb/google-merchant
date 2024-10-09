@@ -1,22 +1,22 @@
 .. _top:
-.. title:: Qouta
+.. title:: Quota
 
 `Back to index <index.rst>`_
 
 =====
-Qouta
+Quota
 =====
 
 .. contents::
     :local:
 
 
-List qoutas
+List quotas
 ```````````
 
 .. code-block:: php
     
-    $result = $client->qouta->list([
+    $result = $client->quota->list([
         
         // optional params
         'pageSize' => 1000,

@@ -120,8 +120,8 @@ Examples
 * `Data sources <data_source.rst>`_
 * `Notifications <notification.rst>`_
 * `Report <report.rst>`_
-* `Qoutas <qouta.rst>`_
-
+* `Quotas <quota.rst>`_
+* `Promotion <promotion.rst>`_
 
 
 `Back to top <#top>`_
