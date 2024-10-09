@@ -17,3 +17,9 @@
 ## [1.0.3] - 2024-10-08
 
 - Added report endpoint
+
+## [1.0.4] - 2024-10-09
+
+- Added qouta endpoint
+- Added promotion endpoint
+- Added client version
