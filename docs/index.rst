@@ -124,6 +124,7 @@ Examples
 * `Promotion <promotion.rst>`_
 * `Account <account.rst>`_
 * `AccountProgram <account_program.rst>`_
+* `AccountRegion <account_region.rst>`_
 
 
 `Back to top <#top>`_
