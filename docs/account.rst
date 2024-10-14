@@ -123,21 +123,4 @@ List issues
     $result = $client->account->listIssues();
 
 
-List online return policies
-```````````````````````````
-
-.. code-block:: php
-    
-    $result = $client->account->listOnlineReturnPolicies();
-
-
-Get online return policy
-````````````````````````
-
-.. code-block:: php
-    
-    $onlineReturnPolicyName = '';
-    $result = $client->account->getOnlineReturnPolicy($onlineReturnPolicyName);
-
-
 `Back to top <#top>`_

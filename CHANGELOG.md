@@ -33,4 +33,4 @@
 - Added terms of service endpoint
 - Added terms of service state endpoint
 - Added terms of service state endpoint
-- Added account shipping settings endpoint
+- Added account online return policy endpoint

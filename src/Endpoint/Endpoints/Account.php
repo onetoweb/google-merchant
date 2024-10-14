@@ -117,22 +117,4 @@ class Account extends AbstractEndpoint
     {
         return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/issues");
     }
-    
-    /**
-     * @return array|null
-     */
-    public function listOnlineReturnPolicies(): ?array
-    {
-        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/onlineReturnPolicies");
-    }
-    
-    /**
-     * @param string $onlineReturnPolicyName
-     * 
-     * @return array|null
-     */
-    public function getOnlineReturnPolicy(string $onlineReturnPolicyName): ?array
-    {
-        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/onlineReturnPolicies/{$onlineReturnPolicyName}");
-    }
 }
