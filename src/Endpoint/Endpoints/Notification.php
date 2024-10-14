@@ -41,11 +41,11 @@ class Notification extends AbstractEndpoint
     
     /**
      * @param array $data
-     * @param array $query = []
+     * @param array $query
      * 
      * @return array|null
      */
-    public function update(int $notificationId, array $data, array $query = []): ?array
+    public function update(int $notificationId, array $data, array $query): ?array
     {
         return $this->client->patch("/notifications/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/notificationsubscriptions/$notificationId", $data, $query);
     }

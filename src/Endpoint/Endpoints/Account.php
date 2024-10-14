@@ -50,12 +50,12 @@ class Account extends AbstractEndpoint
     }
     
     /**
-     * @param array $data = []
-     * @param array $query = []
+     * @param array $data
+     * @param array $query
      * 
      * @return array|null
      */
-    public function updateBusinessInfo(array $data = [], array $query = []): ?array
+    public function updateBusinessInfo(array $data, array $query): ?array
     {
         return $this->client->patch("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/businessInfo", $data, $query);
     }

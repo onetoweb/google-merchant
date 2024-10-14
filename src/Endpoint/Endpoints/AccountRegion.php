@@ -29,11 +29,11 @@ class AccountRegion extends AbstractEndpoint
     
     /**
      * @param array $data
-     * @param array $query = []
+     * @param array $query
      * 
      * @return array|null
      */
-    public function create(array $data, array $query = []): ?array
+    public function create(array $data, array $query): ?array
     {
         return $this->client->post("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/regions", $data, $query);
     }

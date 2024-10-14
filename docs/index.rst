@@ -112,9 +112,9 @@ Setup Client and Authorization Workflow
     }
 
 
-========
-Examples
-========
+=================
+Endpoint Examples
+=================
 
 * `Product <product.rst>`_
 * `DataSource <data_source.rst>`_
@@ -125,6 +125,7 @@ Examples
 * `Account <account.rst>`_
 * `AccountProgram <account_program.rst>`_
 * `AccountRegion <account_region.rst>`_
+* `AccountUser <account_user.rst>`_
 
 
 `Back to top <#top>`_
