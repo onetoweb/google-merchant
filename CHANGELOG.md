@@ -30,3 +30,4 @@
 - Added account program endpoint
 - Added account region endpoint
 - Added account user endpoint
+- Added terms of service endpoint

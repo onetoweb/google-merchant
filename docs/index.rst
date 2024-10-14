@@ -117,15 +117,16 @@ Endpoint Examples
 =================
 
 * `Product <product.rst>`_
-* `DataSource <data_source.rst>`_
+* `Data source <data_source.rst>`_
 * `Notification <notification.rst>`_
 * `Report <report.rst>`_
 * `Quota <quota.rst>`_
 * `Promotion <promotion.rst>`_
 * `Account <account.rst>`_
-* `AccountProgram <account_program.rst>`_
-* `AccountRegion <account_region.rst>`_
-* `AccountUser <account_user.rst>`_
+* `Account program <account_program.rst>`_
+* `Account region <account_region.rst>`_
+* `Account user <account_user.rst>`_
+* `Terms of service <terms_of_service.rst>`_
 
 
 `Back to top <#top>`_
