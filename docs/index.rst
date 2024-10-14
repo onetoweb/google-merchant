@@ -126,7 +126,8 @@ Endpoint Examples
 * `Account program <account_program.rst>`_
 * `Account region <account_region.rst>`_
 * `Account user <account_user.rst>`_
-* `Terms of service <terms_of_service.rst>`_
+* `Account terms of service <account_terms_of_service.rst>`_
+* `Account terms of service state <account_terms_of_service_state.rst>`_
 
 
 `Back to top <#top>`_

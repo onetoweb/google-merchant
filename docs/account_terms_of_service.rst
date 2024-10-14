@@ -1,11 +1,11 @@
 .. _top:
-.. title:: Terms of service
+.. title:: Account terms of service
 
 `Back to index <index.rst>`_
 
-================
-Terms of service
-================
+========================
+Account terms of service
+========================
 
 .. contents::
     :local:
@@ -16,7 +16,7 @@ Retrieve latest terms of service
 
 .. code-block:: php
     
-    $result = $client->termsOfService->retrieveLatest([
+    $result = $client->accountTermsOfService->retrieveLatest([
         'regionCode' => 'NL',
         'kind' => 'MERCHANT_CENTER',
     ]);
@@ -28,7 +28,7 @@ Get terms of service
 .. code-block:: php
     
     $name = '252';
-    $result = $client->termsOfService->get($name);
+    $result = $client->accountTermsOfService->get($name);
 
 
 Accept terms of service
@@ -38,7 +38,7 @@ Accept terms of service
     
     $name = '252';
     $accountId = 9999999999;
-    $result = $client->termsOfService->accept($name, [
+    $result = $client->accountTermsOfService->accept($name, [
         'account' => "accounts/$accountId",
         'regionCode' => 'NL',
     ]);
