@@ -24,6 +24,7 @@
 - Added promotion endpoint
 - Added client version
 
-## [1.0.5] - 2024-10-09
+## [1.0.5] - 2024-10-14
 
 - Added account endpoint
+- Added account program endpoint

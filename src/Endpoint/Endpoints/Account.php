@@ -101,4 +101,38 @@ class Account extends AbstractEndpoint
     {
         return $this->client->patch("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/users/$email/emailPreferences", $data, $query);
     }
+    
+    /**
+     * @return array|null
+     */
+    public function getHomepage(): ?array
+    {
+        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/homepage");
+    }
+    
+    /**
+     * @return array|null
+     */
+    public function listIssues(): ?array
+    {
+        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/issues");
+    }
+    
+    /**
+     * @return array|null
+     */
+    public function listOnlineReturnPolicies(): ?array
+    {
+        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/onlineReturnPolicies");
+    }
+    
+    /**
+     * @param string $onlineReturnPolicyName
+     * 
+     * @return array|null
+     */
+    public function getOnlineReturnPolicy(string $onlineReturnPolicyName): ?array
+    {
+        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/onlineReturnPolicies/{$onlineReturnPolicyName}");
+    }
 }

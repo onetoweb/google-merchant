@@ -33,8 +33,8 @@ List accounts
     ]);
 
 
-List subaccounts
-````````````````
+List sub accounts
+`````````````````
 
 .. code-block:: php
     
@@ -54,8 +54,8 @@ Get business info
     $result = $client->account->getBusinessInfo();
 
 
-List update business info
-`````````````````````````
+Update business info
+````````````````````
 
 .. code-block:: php
     
@@ -105,6 +105,39 @@ Update email preferences
     ], [
         'updateMask' => 'newsAndTips',
     ]);
+
+
+Get homepage
+````````````
+
+.. code-block:: php
+    
+    $result = $client->account->getHomepage();
+
+
+List issues
+```````````
+
+.. code-block:: php
+    
+    $result = $client->account->listIssues();
+
+
+List online return policies
+```````````````````````````
+
+.. code-block:: php
+    
+    $result = $client->account->listOnlineReturnPolicies();
+
+
+Get online return policy
+````````````````````````
+
+.. code-block:: php
+    
+    $onlineReturnPolicyName = '';
+    $result = $client->account->getOnlineReturnPolicy($onlineReturnPolicyName);
 
 
 `Back to top <#top>`_
