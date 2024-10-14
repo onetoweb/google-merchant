@@ -128,6 +128,7 @@ Endpoint Examples
 * `Account user <account_user.rst>`_
 * `Account terms of service <account_terms_of_service.rst>`_
 * `Account terms of service state <account_terms_of_service_state.rst>`_
+* `Account shipping settings <account_shipping_settings.rst>`_
 
 
 `Back to top <#top>`_

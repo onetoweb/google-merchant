@@ -32,3 +32,5 @@
 - Added account user endpoint
 - Added terms of service endpoint
 - Added terms of service state endpoint
+- Added terms of service state endpoint
+- Added account shipping settings endpoint
