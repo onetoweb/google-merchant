@@ -105,14 +105,6 @@ class Account extends AbstractEndpoint
     /**
      * @return array|null
      */
-    public function getHomepage(): ?array
-    {
-        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/homepage");
-    }
-    
-    /**
-     * @return array|null
-     */
     public function listIssues(): ?array
     {
         return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/issues");

@@ -130,6 +130,7 @@ Endpoint Examples
 * `Account terms of service state <account_terms_of_service_state.rst>`_
 * `Account shipping settings <account_shipping_settings.rst>`_
 * `Account online return policy <account_online_return_policy.rst>`_
+* `Account homepage <account_homepage.rst>`_
 
 
 `Back to top <#top>`_

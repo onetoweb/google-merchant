@@ -107,14 +107,6 @@ Update email preferences
     ]);
 
 
-Get homepage
-````````````
-
-.. code-block:: php
-    
-    $result = $client->account->getHomepage();
-
-
 List issues
 ```````````
 
