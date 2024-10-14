@@ -5,7 +5,7 @@ namespace Onetoweb\GoogleMerchant\Endpoint\Endpoints;
 use Onetoweb\GoogleMerchant\Endpoint\AbstractEndpoint;
 
 /**
- * Account Homepage.
+ * Account Homepage Endpoint.
  */
 class AccountHomepage extends AbstractEndpoint
 {
