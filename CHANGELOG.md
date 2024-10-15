@@ -39,6 +39,8 @@
 
 ## [1.0.6] - 2024-10-15
 
-- Added latestFileUpload to dataSource endpoint
+- Added latestFileUpload to data source endpoint
 - Added fetch to dataSource endpoint
 - Added update to dataSource endpoint
+- Added local inventory endpoint
+- Added regional inventory endpoint

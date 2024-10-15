@@ -132,6 +132,8 @@ Endpoint Examples
 * `Account online return policy <account_online_return_policy.rst>`_
 * `Account homepage <account_homepage.rst>`_
 * `Conversion source <conversion_source.rst>`_
+* `Local inventory <local_inventory.rst>`_
+* `Regional inventory <regional_inventory.rst>`_
 
 
 `Back to top <#top>`_
