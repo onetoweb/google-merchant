@@ -61,6 +61,18 @@ class DataSource extends AbstractEndpoint
     }
     
     /**
+     * @param string $dataSourceId
+     * @param array $data
+     * @param array $query
+     * 
+     * @return array|null
+     */
+    public function update(string $dataSourceId, array $data, array $query): ?array
+    {
+        return $this->client->patch("/datasources/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/dataSources/$dataSourceId", $data, $query);
+    }
+    
+    /**
      * @param int $dataSourceId
      * @param string $fileUploads = 'latest'
      * 

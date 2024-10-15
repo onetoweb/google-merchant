@@ -37,6 +37,37 @@ Create data source
     ]);
 
 
+Update data source
+``````````````````
+
+.. code-block:: php
+    
+    $dataSourceId = 99999999999;
+    $result = $client->dataSource->update($dataSourceId, [
+        'displayName' => 'API (updated)'
+    ], [
+        'updateMask' => 'displayName'
+    ]);
+
+
+Fetch data source
+`````````````````
+
+.. code-block:: php
+    
+    $dataSourceId = 99999999999;
+    $result = $client->dataSource->fetch($dataSourceId)
+
+
+Get latest file upload
+``````````````````````
+
+.. code-block:: php
+    
+    $dataSourceId = 99999999999;
+    $result = $client->dataSource->latestFileUpload($dataSourceId);
+
+
 Delete data source
 ``````````````````
 
