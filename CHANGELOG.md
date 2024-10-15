@@ -36,3 +36,7 @@
 - Added account online return policy endpoint
 - Added account homepage endpoint
 - Added conversion source endpoint
+
+## [1.0.6] - 2024-10-15
+
+- Added latestFileUpload to dataSource endpoint

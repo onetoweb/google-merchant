@@ -49,4 +49,15 @@ class DataSource extends AbstractEndpoint
     {
         return $this->client->delete("/datasources/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/dataSources/$dataSourceId");
     }
+    
+    /**
+     * @param int $dataSourceId
+     * @param string $fileUploads = 'latest'
+     * 
+     * @return array|null
+     */
+    public function latestFileUpload(int $dataSourceId, string $fileUploads = 'latest'): ?array
+    {
+        return $this->client->get("/datasources/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/dataSources/$dataSourceId/fileUploads/$fileUploads");
+    }
 }
