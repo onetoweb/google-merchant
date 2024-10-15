@@ -21,6 +21,16 @@ class DataSource extends AbstractEndpoint
     }
     
     /**
+     * @param string $dataSourceId
+     * 
+     * @return array|null
+     */
+    public function fetch(string $dataSourceId): ?array
+    {
+        return $this->client->post("/datasources/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/dataSources/$dataSourceId:fetch");
+    }
+    
+    /**
      * @param array $query = []
      * 
      * @return array|null

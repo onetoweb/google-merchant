@@ -40,3 +40,5 @@
 ## [1.0.6] - 2024-10-15
 
 - Added latestFileUpload to dataSource endpoint
+- Added fetch to dataSource endpoint
+
