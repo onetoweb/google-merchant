@@ -10,20 +10,22 @@ use Onetoweb\GoogleMerchant\Endpoint\AbstractEndpoint;
 class AccountOnlineReturnPolicy extends AbstractEndpoint
 {
     /**
-     * @return array|null
-     */
-    public function list(): ?array
-    {
-        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/onlineReturnPolicies");
-    }
-    
-    /**
-     * @param string $onlineReturnPolicyName
+     * @param array $query = []
      * 
      * @return array|null
      */
-    public function get(string $onlineReturnPolicyName): ?array
+    public function list(array $query = []): ?array
     {
-        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/onlineReturnPolicies/{$onlineReturnPolicyName}");
+        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/onlineReturnPolicies", $query);
+    }
+    
+    /**
+     * @param string $name
+     * 
+     * @return array|null
+     */
+    public function get(string $name): ?array
+    {
+        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/onlineReturnPolicies/{$name}");
     }
 }

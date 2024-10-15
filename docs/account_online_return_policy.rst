@@ -16,7 +16,12 @@ List online return policies
 
 .. code-block:: php
     
-    $result = $client->accountOnlineReturnPolicy->list();
+    $result = $client->accountOnlineReturnPolicy->list([
+        
+        // optional params
+        'pageSize' => 1000,
+        'pageToken' => '{page_token}',
+    ]);
 
 
 Get online return policy

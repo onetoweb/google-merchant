@@ -16,7 +16,12 @@ List account users
 
 .. code-block:: php
     
-    $result = $client->accountUser->list();
+    $result = $client->accountUser->list([
+        
+        // optional params
+        'pageSize' => 1000,
+        'pageToken' => '{page_token}',
+    ]);
 
 
 Get account user

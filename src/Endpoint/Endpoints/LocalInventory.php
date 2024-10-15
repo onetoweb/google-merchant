@@ -15,7 +15,7 @@ class LocalInventory extends AbstractEndpoint
      * 
      * @return array|null
      */
-    public function list(string $offerId, array $query = [])
+    public function list(string $offerId, array $query = []): ?array
     {
         return $this->client->get("/inventories/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/products/$offerId/localInventories", $query);
     }

@@ -10,11 +10,13 @@ use Onetoweb\GoogleMerchant\Endpoint\AbstractEndpoint;
 class AccountUser extends AbstractEndpoint
 {
     /**
+     * @param array $query = []
+     * 
      * @return array|null
      */
-    public function list(): ?array
+    public function list(array $query = []): ?array
     {
-        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/users");
+        return $this->client->get("/accounts/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/users", $query);
     }
     
     /**

@@ -16,7 +16,12 @@ List account regions
 
 .. code-block:: php
     
-    $result = $client->accountRegion->list();
+    $result = $client->accountRegion->list([
+        
+        // optional params
+        'pageSize' => 1000,
+        'pageToken' => '{page_token}',
+    ]);
 
 
 Get account region

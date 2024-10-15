@@ -16,7 +16,12 @@ List programs
 
 .. code-block:: php
     
-    $result = $client->accountProgram->list();
+    $result = $client->accountProgram->list([
+        
+        // optional params
+        'pageSize' => 1000,
+        'pageToken' => '{page_token}',
+    ]);
 
 
 Get program
