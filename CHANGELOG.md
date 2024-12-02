@@ -44,3 +44,7 @@
 - Added update to dataSource endpoint
 - Added local inventory endpoint
 - Added regional inventory endpoint
+
+## [1.0.7] - 2024-12-02
+
+- Product::listAll fetch products with pageSize: 250
