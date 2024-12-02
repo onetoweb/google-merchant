@@ -16,7 +16,7 @@ List products
 
 .. code-block:: php
     
-    $result = $client->inventory->list([
+    $result = $client->product->list([
         
         // optional params
         'pageSize' => 1000,
@@ -32,7 +32,7 @@ Yields products using the Generator syntax.
 
 .. code-block:: php
     
-    $result = $client->inventory->listAll();
+    $result = $client->product->listAll();
 
 
 Get product
@@ -41,7 +41,7 @@ Get product
 .. code-block:: php
     
     $offerId = 'online~en~NL~aaaaaaaaa';
-    $result = $client->inventory->get($offerId);
+    $result = $client->product->get($offerId);
 
 
 Create product
@@ -50,7 +50,7 @@ Create product
 .. code-block:: php
     
     $dataSourceId = 99999999999;
-    $result = $client->inventory->create($dataSourceId, [
+    $result = $client->product->create($dataSourceId, [
         'channel' => 'ONLINE',
         'offerId' => 'aaaaaaaaa',
         'contentLanguage' => 'en',
