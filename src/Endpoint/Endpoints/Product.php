@@ -11,13 +11,13 @@ use Generator;
 class Product extends AbstractEndpoint
 {
     /**
-     * @param string $offerId
+     * @param string $id
      * 
      * @return array|null
      */
-    public function get(string $offerId): ?array
+    public function get(string $id): ?array
     {
-        return $this->client->get("/products/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/products/$offerId");
+        return $this->client->get("/products/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/products/$id");
     }
     
     /**
@@ -34,13 +34,13 @@ class Product extends AbstractEndpoint
     }
     
     /**
-     * @param string $offerId
+     * @param string $id
      *
      * @return array|null
      */
-    public function delete(string $offerId, int $dataSourceId): ?array
+    public function delete(string $id, int $dataSourceId): ?array
     {
-        return $this->client->delete("/products/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/productInputs/$offerId", [
+        return $this->client->delete("/products/{$this->client->getVersion()}/accounts/{$this->client->getAccountId()}/productInputs/$id", [
             'dataSource' => "accounts/{$this->client->getAccountId()}/dataSources/$dataSourceId"
         ]);
     }
@@ -64,7 +64,7 @@ class Product extends AbstractEndpoint
         do {
             
             $result = $this->list([
-                'pageSize' => 1,
+                'pageSize' => 250,
                 'pageToken' => $pageToken,
             ]);
             

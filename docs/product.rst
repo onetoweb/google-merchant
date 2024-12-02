@@ -19,7 +19,7 @@ List products
     $result = $client->product->list([
         
         // optional params
-        'pageSize' => 1000,
+        'pageSize' => 250,
         'pageToken' => '{page_token}',
     ]);
 
