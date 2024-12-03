@@ -52,3 +52,7 @@
 ## [1.0.8] - 2024-12-03
 
 - Added search all method to report endpoint
+
+## [1.0.9] - 2024-12-03
+
+- Bugfix: report::searchAll method uses the correct page token

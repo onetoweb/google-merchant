@@ -32,7 +32,7 @@ class Report extends AbstractEndpoint
             
             $results = $this->search([
                 'query' => $query,
-                'pageSize' => 250,
+                'pageSize' => 1000,
                 'pageToken' => $pageToken,
             ]);
             
@@ -44,7 +44,7 @@ class Report extends AbstractEndpoint
                 }
             }
             
-            $pageToken = $result['nextPageToken'] ?? null;
+            $pageToken = $results['nextPageToken'] ?? null;
         }
         while ($pageToken !== null);
     }
