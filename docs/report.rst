@@ -28,4 +28,15 @@ Search reports
     ]);
 
 
+Search all reports
+``````````````````
+
+Lists all (1000+ results) using multiple requests.
+Yields results using the Generator syntax.
+
+.. code-block:: php
+    
+    $result = $client->report->search('SELECT product_view.id, product_view.title FROM product_view');
+
+
 `Back to top <#top>`_

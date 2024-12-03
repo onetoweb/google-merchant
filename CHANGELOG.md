@@ -48,3 +48,7 @@
 ## [1.0.7] - 2024-12-02
 
 - Product::listAll fetch products with pageSize: 250
+
+## [1.0.8] - 2024-12-03
+
+- Added search all method to report endpoint
