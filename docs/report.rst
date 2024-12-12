@@ -36,7 +36,7 @@ Yields results using the Generator syntax.
 
 .. code-block:: php
     
-    $result = $client->report->search('SELECT product_view.id, product_view.title FROM product_view');
+    $result = $client->report->searchAll('SELECT product_view.id, product_view.title FROM product_view');
 
 
 `Back to top <#top>`_
