@@ -36,7 +36,7 @@ class Client
     /**
      * Scope.
      */
-    public const VERSION = 'v1beta';
+    public const VERSION = 'v1';
     
     /**
      * Methods.

@@ -56,3 +56,7 @@
 ## [1.0.9] - 2024-12-03
 
 - Bugfix: report::searchAll method uses the correct page token
+
+## [1.1.0] - 2025-08-21
+
+- Move client out of beta
