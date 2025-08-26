@@ -283,6 +283,32 @@ class Client
     }
     
     /**
+     * @param string $developerEmail
+     * 
+     * @return bool 
+     */
+    public function registerGcp(string $developerEmail): bool
+    {
+        // build options
+        $options = [
+            RequestOptions::HTTP_ERRORS => true,
+            RequestOptions::HEADERS => [
+                'accept' => 'application/json',
+                'content-type' => 'application/json',
+                'authorization' => "Bearer {$this->getToken()}"
+            ],
+            RequestOptions::JSON => [
+                'developerEmail' => $developerEmail
+            ]
+        ];
+        
+        // make request
+        $response = (new GuzzleCLient())->post(self::BASE_HREF . "/accounts/v1/accounts/{$this->getAccountId()}/developerRegistration:registerGcp", $options);
+        
+        return in_array($response->getStatusCode(), range(200, 299));
+    }
+    
+    /**
      * @param string $code
      * 
      * @return void
