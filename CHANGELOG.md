@@ -60,3 +60,7 @@
 ## [1.1.0] - 2025-08-21
 
 - Move client out of beta
+
+## [1.1.1] - 2025-08-26
+
+- Added registerGcp method to client
