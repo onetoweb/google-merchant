@@ -4,6 +4,7 @@ namespace Onetoweb\GoogleMerchant;
 
 use Onetoweb\GoogleMerchant\Endpoint\Endpoints;
 use Onetoweb\GoogleMerchant\Config\ConfigInterface;
+use Onetoweb\GoogleMerchant\Enum\Method;
 use Onetoweb\GoogleMerchant\Token;
 use Onetoweb\GoogleMerchant\Exception\{
     RedirectUrlException,
@@ -14,6 +15,7 @@ use Onetoweb\GoogleMerchant\Exception\{
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Client as GuzzleCLient;
 use DateTime;
+use Closure;
 
 /**
  * Google Merchant Api Client.
@@ -39,52 +41,35 @@ class Client
     public const VERSION = 'v1';
     
     /**
-     * Methods.
+     * @var Token|null
      */
-    public const METHOD_GET = 'GET';
-    public const METHOD_POST = 'POST';
-    public const METHOD_PATCH = 'PATCH';
-    public const METHOD_DELETE = 'DELETE';
+    private ?Token $token = null;
     
     /**
-     * @var ConfigInterface
+     * @var string|null
      */
-    private $config;
+    private ?string $redirectUrl = null;
     
     /**
      * @var string
      */
-    private $version;
-    
-    /**
-     * @var Token
-     */
-    private $token;
-    
-    /**
-     * @var string
-     */
-    private $redirectUrl;
-    
-    /**
-     * @var string
-     */
-    private $tokenUpdateCallback;
+    private ?Closure $tokenUpdateCallback = null;
     
     /**
      * @var int
      */
-    private $accountId;
+    private ?int $accountId = null;
     
     /**
      * @param ConfigInterface $config
      * @param string $version = self::VERSION
      */
-    public function __construct(ConfigInterface $config, string $version = self::VERSION)
-    {
-        $this->config = $config;
-        $this->version = $version;
+    public function __construct(
         
+        #[\SensitiveParameter]
+        private ConfigInterface $config,
+        private string $version = self::VERSION
+    ) {
         // load endpoints
         $this->loadEndpoints();
     }
@@ -193,11 +178,11 @@ class Client
     }
     
     /**
-     * @param callable $tokenUpdateCallback
+     * @param Closure $tokenUpdateCallback
      * 
      * @return void
      */
-    public function setTokenUpdateCallback(callable $tokenUpdateCallback): void
+    public function setTokenUpdateCallback(Closure $tokenUpdateCallback): void
     {
         $this->tokenUpdateCallback = $tokenUpdateCallback;
     }
@@ -245,7 +230,7 @@ class Client
      */
     public function get(string $endpoint, array $query = []): ?array
     {
-        return $this->request(self::METHOD_GET, $endpoint, [], $query);
+        return $this->request(Method::GET, $endpoint, [], $query);
     }
     
     /**
@@ -257,7 +242,7 @@ class Client
      */
     public function post(string $endpoint, array $data = [], array $query = []): ?array
     {
-        return $this->request(self::METHOD_POST, $endpoint, $data, $query);
+        return $this->request(Method::POST, $endpoint, $data, $query);
     }
     
     /**
@@ -269,7 +254,7 @@ class Client
      */
     public function patch(string $endpoint, array $data = [], array $query = []): ?array
     {
-        return $this->request(self::METHOD_PATCH, $endpoint, $data, $query);
+        return $this->request(Method::PATCH, $endpoint, $data, $query);
     }
     
     /**
@@ -279,7 +264,7 @@ class Client
      */
     public function delete(string $endpoint, array $query = []): ?array
     {
-        return $this->request(self::METHOD_DELETE, $endpoint, [], $query);
+        return $this->request(Method::DELETE, $endpoint, [], $query);
     }
     
     /**
@@ -405,14 +390,14 @@ class Client
     }
     
     /**
-     * @param string $method
+     * @param Method $method
      * @param string $endpoint
      * @param array $data = []
      * @param array $query = []
      * 
      * @return array|null
      */
-    public function request(string $method, string $endpoint, array $data = [], array $query = []): ?array
+    public function request(Method $method, string $endpoint, array $data = [], array $query = []): ?array
     {
         // check if token is not expired
         if ($this->getToken()->isExpired()) {
@@ -431,7 +416,7 @@ class Client
         ];
         
         // add json body
-        if (in_array($method, [self::METHOD_POST, self::METHOD_PATCH]) and count($data) > 0) {
+        if (in_array($method, [Method::POST, Method::PATCH]) and count($data) > 0) {
             $options[RequestOptions::JSON] = $data;
         }
         
@@ -439,7 +424,7 @@ class Client
         $url = $this->getUrl($endpoint);
         
         // make request
-        $response = (new GuzzleCLient())->request($method, $url, $options);
+        $response = (new GuzzleCLient())->request($method->value, $url, $options);
         
         // get response contents
         $contents = $response->getBody()->getContents();

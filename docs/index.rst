@@ -86,15 +86,15 @@ Setup Client and Authorization Workflow
         // set token
         $client->setToken($token);
         
-    } elseif ($request->get('code')) {
+    } elseif ($request->query->has('code')) {
         
         // check state
-        if ($request->get('state') !== $session->get('state')) {
+        if ($request->query->get('state') !== $session->get('state')) {
             throw new \Exception('states does not match');
         }
         
         // request token from code
-        $client->requestTokenFromCode($request->get('code'));
+        $client->requestTokenFromCode($request->query->get('code'));
         
     } else {
         

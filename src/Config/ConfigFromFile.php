@@ -10,14 +10,19 @@ use Onetoweb\GoogleMerchant\Exception\{ConfigFileException, ConfigJsonException}
 final class ConfigFromFile extends AbstractConfig implements ConfigInterface
 {
     /**
-     * @var string
+     * @var string|null
      */
-    private $clientId;
+    private ?string $clientId = null;
     
     /**
-     * @var string
+     * @var string|null
      */
-    private $clientSecret;
+    private ?string $clientSecret = null;
+    
+    /**
+     * @var array
+     */
+    private array $redirectUrls = [];
     
     /**
      * @param string $configFile

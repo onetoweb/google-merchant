@@ -10,5 +10,5 @@ abstract class AbstractConfig implements ConfigInterface
     /**
      * @var array
      */
-    protected $redirectUrls = [];
+    private array $redirectUrls = [];
 }

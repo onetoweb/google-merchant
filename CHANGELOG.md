@@ -64,3 +64,11 @@
 ## [1.1.1] - 2025-08-26
 
 - Added registerGcp method to client
+
+## [1.2.0] - 2026-09-22
+
+- Require php 8.1 or higher
+- Drop support for guzzle 6
+- Add support for guzzle 8
+- Add SensitiveParameter attribute
+

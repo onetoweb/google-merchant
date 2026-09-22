@@ -8,25 +8,21 @@ namespace Onetoweb\GoogleMerchant\Config;
 final class Config extends AbstractConfig implements ConfigInterface
 {
     /**
-     * @var string
-     */
-    private $clientId;
-    
-    /**
-     * @var string
-     */
-    private $clientSecret;
-    
-    /**
      * @param string $clientId
      * @param string $clientSecret
      * @param array $redirectUrls = []
      */
-    public function __construct(string $clientId, string $clientSecret, array $redirectUrls = [])
+    public function __construct(
+        
+        #[\SensitiveParameter]
+        private string $clientId,
+        
+        #[\SensitiveParameter]
+        private string $clientSecret,
+        
+        private array $redirectUrls = [])
     {
-        $this->clientId = $clientId;
-        $this->clientSecret = $clientSecret;
-        $this->redirectUrls = $redirectUrls;
+        
     }
     
     /**
